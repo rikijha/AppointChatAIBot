@@ -2,7 +2,7 @@
 ![img_3.png](img_3.png)
 
 # Appoint chat AI bot using OpenAi gpt-3.5-turbo large language model and Langchain agent
-An AI bot that can be use to analysis all kinds of pdf reports and research
+An AI bot that can be use to schedule appointments, meetings or catchup calls on Google Calendar
 
 # Tech stack used
 Python, langchain, OpenAI gpt-3.5-turbo LLM, Google calendar custom tool for langchain agent, stream lit for ui
