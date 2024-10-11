@@ -6,18 +6,25 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.tools.render import format_tool_to_openai_function
 from langchain.agents.format_scratchpad import format_to_openai_function_messages
 from langchain.agents.output_parsers import OpenAIFunctionsAgentOutputParser
-from tools.calendar_tools import GetCalendarEventsTool,CreateCalendarEventTool,DeleteCalendarEventTool,TimeDeltaTool,SpecificTimeTool
+from tools.get_calendar_events_tool import GetCalendarEventsTool
+from tools.current_time_tool import CurrentTimeTool
+from tools.get_time_delta_tool import TimeDeltaTool
+from tools.get_specific_time_tool import SpecificTimeTool
+from tools.create_calendar_event_tool import CreateCalendarEventTool
+from tools.delete_calendar_event_tools import DeleteCalendarEventTool
 
-from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chat_models import ChatOpenAI
 from dotenv import load_dotenv
 load_dotenv(".env")
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_MODEL="gpt-3.5-turbo-0125"
+
+
 def run_agent_executor(user_input: str, calendar_id: str):
     llm = ChatOpenAI(temperature=0, model=OPENAI_MODEL, api_key=OPENAI_API_KEY)
     tools = [
+        CurrentTimeTool(),
         TimeDeltaTool(),
         GetCalendarEventsTool(),
         CreateCalendarEventTool(),

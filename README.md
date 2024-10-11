@@ -22,3 +22,11 @@ https://console.cloud.google.com/
 # Application start cmd
 
 ```stremlit run app.py```
+
+# Architectural Diagram
+![img_3.png](img_3.png)
+
+# Some screenshot of application
+![img.png](img.png)
+![img_2.png](img_2.png)
+![img_1.png](img_1.png)

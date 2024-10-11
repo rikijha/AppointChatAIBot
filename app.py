@@ -1,5 +1,5 @@
 from google_auth import *
-from tools.calendar_function import get_calender_list
+from functions.calendar_function import get_calender_list
 from agent import run_agent_executor
 import streamlit as st
 
