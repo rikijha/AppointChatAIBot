@@ -1,3 +1,6 @@
+# Architectural Diagram
+![img_3.png](img_3.png)
+
 # Appoint chat AI bot using OpenAi gpt-3.5-turbo large language model and Langchain agent
 An AI bot that can be use to analysis all kinds of pdf reports and research
 
@@ -23,8 +26,7 @@ https://console.cloud.google.com/
 
 ```stremlit run app.py```
 
-# Architectural Diagram
-![img_3.png](img_3.png)
+
 
 # Some screenshot of application
 ![img.png](img.png)
